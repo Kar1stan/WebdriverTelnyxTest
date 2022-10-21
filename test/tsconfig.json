@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "types": [
+            "node",
+            "webdriverio/async",
+            "@wdio/mocha-framework",
+            "expect-webdriverio"
+        ],
+        "target": "es2019"
+    },
+    "value": {
+        "error": "unknown command",
+        "message": "Unable to find handler for (GET) \u002fselenium-server\u002fdriver\u002f",
+        "stacktrace": ""
+      }
+}
