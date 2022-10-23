@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1666512606339' stop='1666512633404'>
+    <name>Footer Data &amp; Privacy page</name>
+    <title>Footer Data &amp; Privacy page</title>
+    <test-cases>
+        <test-case start='1666512606341' status='passed' stop='1666512633402'>
+            <name>Should scroll to Overview button and click page button</name>
+            <title>Should scroll to Overview button and click page button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-106.0.5249.119'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
