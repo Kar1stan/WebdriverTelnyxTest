@@ -32,6 +32,7 @@ jobs:
     - run: Url=PROD_URL npm run testfirefox
     
     - name: Deploy 🚀
+      if: always()
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: gh-pages
