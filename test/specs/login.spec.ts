@@ -8,7 +8,8 @@ describe('Footer LogIn page', () => {
         await LoginPage.clickFooterLogInBtn();
         await LoginPage.fillLogInWithValidEmail("foloxov@gmail.com");
         await LoginPage.fillLogInWithValidPassword("ZpPQ_q!!u#Lz6PZ");
-        await expect(LoginPage.logInError).toBeDisplayed();
+        //await expect(LoginPage.logInError).toBeDisplayed();
+        await expect(browser).toHaveUrlContaining("/login/sign-in");
     });
 
     it('Should login with invalid password', async () => {
@@ -17,7 +18,8 @@ describe('Footer LogIn page', () => {
         await LoginPage.clickFooterLogInBtn();
         await LoginPage.fillLogInWithValidEmail("foloxov@gmail.com");
         await LoginPage.fillLogInWithInvalidPassword("!!!!");
-        await expect(LoginPage.logInError).toBeDisplayed();
+        //await expect(LoginPage.logInError).toBeDisplayed();
+        await expect(browser).toHaveUrlContaining("/login/sign-in");
     });
 
     it('Should login with empty credentials', async () => {
