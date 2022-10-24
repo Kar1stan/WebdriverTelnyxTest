@@ -31,6 +31,7 @@ class DeveloperDocsPage {
     }
 
     async clickSDKSetupLinkInDevelopmentBtn(){
+        await this.DevelopmentBtn.waitForDisplayed({ timeout: 5000 });
         await this.DevelopmentBtn.click();
         await this.sdkSetupBtn.click();
     }
