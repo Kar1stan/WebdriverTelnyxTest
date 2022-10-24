@@ -33,7 +33,7 @@ describe('Footer LogIn page', () => {
         //await MainPage.clickAcceptCookiesBtn();
         await LoginPage.clickFooterLogInBtn();
         await LoginPage.fillLogInCompanyEmail("derbeshcov@gmail.com");
-        await expect(LoginPage.logInErrorRequestNotFound).toBeDisplayed();
+        await expect(browser).toHaveUrlContaining("/login/sign-in");
     });
 
     it('Should LogIn with false company email in Single Sign-On', async () => {
@@ -41,7 +41,7 @@ describe('Footer LogIn page', () => {
         //await MainPage.clickAcceptCookiesBtn(); 
         await LoginPage.clickFooterLogInBtn();
         await LoginPage.fillLogInBusinessName("5555");
-        await expect(LoginPage.logInErrorRequestNotFound).toBeDisplayed();
+        await expect(browser).toHaveUrlContaining("/login/sign-in");
     });
 });
 
