@@ -37,6 +37,7 @@ class DeveloperDocsPage {
     }
 
     async clickTelnyxStatusLinkInAPIv1Documentation(){
+        await this.apiv1Btn.waitForDisplayed({ timeout: 5000 });
         await this.apiv1Btn.click();
         await this.telnyxStatusLink.click();
     }
