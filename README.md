@@ -23,7 +23,7 @@ Open the terminal and run: Url=PROD_URL npm run testchrome if you want run the p
 
 run: Url=DEV_URL npm run testchrome if you want run the project in the development mode.
 
-Switch testchrome to testfirefox if you want to run project in the firefox browser sane rules modes could have been applied.Example:Url=PROD_URL npm run testfirefox.
+Switch testchrome to testfirefox if you want to run project in the firefox browser same modes could have been applied.Example:Url=PROD_URL npm run testfirefox.
 
 To run project as Docker image Open the terminal and run:
 docker build -t mytest -f Dockerfile .
