@@ -40,3 +40,7 @@ jobs:
         folder: allure-report
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Download image
+    - run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - run: docker run -it my-image-name:$(date +%s)
