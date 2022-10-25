@@ -19,8 +19,8 @@
         "wdio-chromedriver-service": "^8.0.0"
     },
     "scripts": {
-        "testchrome": "wdio run test/wdio.conf1.ts",
-        "testfirefox": "wdio run test/wdio.conf2.ts"
+        "testchrome": "wdio run test/wdio.confchrome.ts",
+        "testfirefox": "wdio run test/wdio.conffirefox.ts"
     },
     "dependencies": {
         "allure-commandline": "^2.18.1",
