@@ -4,9 +4,8 @@ import MainPage from  '../pageobjects/Main.page';
 beforeEach(() => {
    MainPage.goto();
 })
-
+ /*
 describe('Footer AboutUs page', () => {
-   /*
     it('Should click Amsterdam Google Maps link ', async () => {
         await MainPage.clickAcceptCookiesBtn();
         await AboutUsPage.clickFooterAboutUsBtn();
