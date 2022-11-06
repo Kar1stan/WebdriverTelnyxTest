@@ -19,7 +19,7 @@ class BlogPage {
     }
 
     async setBlogFilterhByProductAndContent(){
-        await this.verifyAPIBtn.waitForDisplayed({ timeout: 5000 });
+        await this.verifyAPIBtn.waitForDisplayed({ timeout: 10000 });
         await this.verifyAPIBtn.click();
         await this.guidesTutorialsBtn.click();
     }
