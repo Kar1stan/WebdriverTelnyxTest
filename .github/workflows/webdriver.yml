@@ -31,9 +31,6 @@ jobs:
     - name: Run tests
       run: Url=PROD_URL npm run testchrome 
 
-    - name: Run Allure report
-      run: npm run allure:report
-
     - name: Stop containers
       if: always()
       run: docker-compose -f "selenium-4-grid.yml" down
