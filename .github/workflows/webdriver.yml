@@ -21,7 +21,7 @@ jobs:
 
     steps:
     - name: Start containers
-      run: docker-compose -f "selenium-grid.yml" up -d --build
+      run: docker-compose -f "selenium-4-grid.yml" up -d --build
       
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
@@ -36,7 +36,7 @@ jobs:
     
     - name: Stop containers
       if: always()
-      run: docker-compose -f "selenium-grid.yml" down
+      run: docker-compose -f "selenium-4-grid.yml" down
     
     - name: Deploy 🚀
       if: always()
