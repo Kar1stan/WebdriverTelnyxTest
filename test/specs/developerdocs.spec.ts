@@ -4,9 +4,9 @@ import MainPage from '../pageobjects/Main.page';
 beforeEach(() => {
     MainPage.goto();
 })
-
+/*
 describe('Footer DeveloperDocs page', () => {
-    it.skip('Should click API Reference button on the header and Messaging button inside of it', async () => {
+    /it('Should click API Reference button on the header and Messaging button inside of it', async () => {
         await MainPage.clickAcceptCookiesBtn();
         await DeveloperDocsPage.clickFooterDeveloperDocsBtn();
         await DeveloperDocsPage.clickSDKSetupLinkInDevelopmentBtn();
@@ -14,9 +14,9 @@ describe('Footer DeveloperDocs page', () => {
     });
 
     it('Should click APIv1 and View details buttons', async () => {
-        await MainPage.clickAcceptCookiesBtn();
         await DeveloperDocsPage.clickFooterDeveloperDocsBtn();
         await DeveloperDocsPage.clickTelnyxStatusLinkInAPIv1Documentation();
         await expect(browser).toHaveUrl("https://status.telnyx.com/");
     });
 });
+*/
