@@ -38,21 +38,25 @@ class AboutUsPage {
 
     async locateWarsaw(){
         await this.linkGoogleMapsWarsaw.scrollIntoView();
+        await this.linkGoogleMapsAmsterdam.waitForDisplayed({ timeout: 5000 });
         await this.linkGoogleMapsWarsaw.click();
     }
 
     async locateDenver(){
         await this.linkGoogleMapsDenver.scrollIntoView();
+        await this.linkGoogleMapsAmsterdam.waitForDisplayed({ timeout: 5000 });
         await this.linkGoogleMapsDenver.click();
     }
 
     async locateChicago(){
         await this.linkGoogleMapsChicago.scrollIntoView();
+        await this.linkGoogleMapsAmsterdam.waitForDisplayed({ timeout: 5000 });
         await this.linkGoogleMapsChicago.click();
     }
 
     async locateDublin(){
         await this.linkGoogleMapsDublin.scrollIntoView();
+        await this.linkGoogleMapsAmsterdam.waitForDisplayed({ timeout: 5000 });
         await this.linkGoogleMapsDublin.click();
     }
 }
