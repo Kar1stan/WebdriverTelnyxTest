@@ -9,6 +9,6 @@ describe('Home page Telnyx email form', () => {
     it('Should open products storage page', async () => {
         await MainPage.clickAcceptCookiesBtn();
         await StoragePage.clickTryForFreeBtn("foloxov@gmail.com");
-        await expect(browser).toHaveUrl("https://telnyx.com/sign-up");
+        await expect(browser).toHaveUrl("https://telnyx.com/sign-up?email=foloxov@gmail.com");
     });
 });
