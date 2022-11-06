@@ -30,9 +30,6 @@ jobs:
     - run: npm install
     - run: Url=PROD_URL npm run testchrome
     - run: Url=PROD_URL npm run testfirefox
-    - run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-    - run: docker run -it my-image-name:$(date +%s)
-    
     
     - name: Deploy 🚀
       if: always()
