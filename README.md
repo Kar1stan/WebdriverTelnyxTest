@@ -22,14 +22,14 @@ Install project dependencies with: npm i
 
 ## 🚀 Run the project: 
 If you want run the project in the production mode open the terminal and run: 
----
+```
 Url=PROD_URL npm run testchrome 
----
+```
 If you want run the project in the development mode open the terminal and run: 
----
+```
 Url=DEV_URL npm run testchrome 
----
+```
 Switch testchrome to testfirefox if you want to run project in the firefox browser same modes could have been applied.
----
+```
 Example:Url=PROD_URL npm run testfirefox.
----
+```
