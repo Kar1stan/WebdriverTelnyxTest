@@ -6,7 +6,7 @@ beforeEach(() => {
 })
 
 describe('Footer DeveloperDocs page', () => {
-    it('Should click API Reference button on the header and Messaging button inside of it', async () => {
+    it.skip('Should click API Reference button on the header and Messaging button inside of it', async () => {
         await MainPage.clickAcceptCookiesBtn();
         await DeveloperDocsPage.clickFooterDeveloperDocsBtn();
         await DeveloperDocsPage.clickSDKSetupLinkInDevelopmentBtn();
