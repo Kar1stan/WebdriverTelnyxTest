@@ -1,42 +1,44 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Node.js CI
+name: Test
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+    - master    
   pull_request:
-    branches: [ "main" ]
+    branches:
+    - master
 
 jobs:
-  build:
-
+  docker:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
     - name: Start containers
       run: docker-compose -f "selenium-4-grid.yml" up -d --build
-      
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+
+    - name: Install node
+      uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm install
-    - run: Url=PROD_URL npm run testchrome
-    - run: Url=PROD_URL npm run testfirefox
-    
+        node-version: 14.x
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: Url=PROD_URL npm run testchrome 
+
+    - name: Run Allure report
+      run: npm run allure:report
+
     - name: Stop containers
       if: always()
       run: docker-compose -f "selenium-4-grid.yml" down
+    
+    
     
     - name: Deploy 🚀
       if: always()
