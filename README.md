@@ -14,8 +14,6 @@ Integrated with:
 
 Before you use this project you need to have Docker installed in your computer.
 
-Dellete package.lock file before you run the project.
-
 ## 🚀 Install the project
 
 Install project dependencies with: npm i
