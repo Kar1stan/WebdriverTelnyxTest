@@ -32,6 +32,7 @@ class AboutUsPage {
 
     async locateAmsterdam(){
         await this.linkGoogleMapsAmsterdam.scrollIntoView();
+        await this.linkGoogleMapsAmsterdam.waitForDisplayed({ timeout: 5000 });
         await this.linkGoogleMapsAmsterdam.click();
     }
 
