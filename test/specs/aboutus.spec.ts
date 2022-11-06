@@ -6,6 +6,7 @@ beforeEach(() => {
 })
 
 describe('Footer AboutUs page', () => {
+   /*
     it('Should click Amsterdam Google Maps link ', async () => {
         await MainPage.clickAcceptCookiesBtn();
         await AboutUsPage.clickFooterAboutUsBtn();
@@ -32,3 +33,4 @@ describe('Footer AboutUs page', () => {
         await AboutUsPage.locateWarsaw();
     });
 });
+*/
