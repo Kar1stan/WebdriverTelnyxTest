@@ -14,6 +14,7 @@ describe('Footer DeveloperDocs page', () => {
     });
 
     it('Should click APIv1 and View details buttons', async () => {
+        await MainPage.clickAcceptCookiesBtn();
         await DeveloperDocsPage.clickFooterDeveloperDocsBtn();
         await DeveloperDocsPage.clickTelnyxStatusLinkInAPIv1Documentation();
         await expect(browser).toHaveUrl("https://status.telnyx.com/");
