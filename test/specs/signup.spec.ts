@@ -35,6 +35,6 @@ describe('SignUp page test', () => {
     it('Should click Log In button at Sign Up page', async () => {
         await SignupPage.clickFooterSignUpBtn();
         await SignupPage.clickSignUpWithLogInLinkButton();
-        await expect(browser).toHaveUrl("https://portal.telnyx.com/?_gl=1*bk99s1*_ga*MTQ4NDcxMzAzOC4xNjY3ODE2Mjg3*_ga_ZPM4K1DLND*MTY2NzgxNjI4OS4xLjEuMTY2NzgxNjM3MC4wLjAuMA..#");
+        await expect(browser).toHaveUrl("https://portal.telnyx.com/?_gl=1*1cot9zw*_ga*MTk0NTkwNzAwNS4xNjY3ODE3MDc1*_ga_ZPM4K1DLND*MTY2NzgxNzA3Ni4xLjEuMTY2NzgxNzE0Mi4wLjAuMA..#/login/sign-in");
     });
 });
