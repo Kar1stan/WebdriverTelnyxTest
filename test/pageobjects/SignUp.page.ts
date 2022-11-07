@@ -67,7 +67,7 @@ class SignupPage {
     }
   
     async clickSignUpWithLogInLinkButton(){
-        await this.signUpLogInLinkBtn.waitForDisplayed({ timeout: 5000 });
+        await this.signUpLogInLinkBtn.waitForDisplayed({ timeout: 10000 });
         await this.signUpLogInLinkBtn.click();
     }
 }
