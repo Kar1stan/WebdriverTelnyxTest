@@ -31,3 +31,7 @@ Switch testchrome to testfirefox if you want to run project in the firefox brows
 ```
 Example:Url=PROD_URL npm run testfirefox.
 ```
+To run docker containers open the terminal and run:
+```
+docker-compose -f "selenium-4-grid.yml" up -d --build
+```
