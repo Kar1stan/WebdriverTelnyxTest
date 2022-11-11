@@ -12,6 +12,7 @@ describe('LogIn page test', () => {
         await LoginPage.clickFooterLogInBtn();
         await LoginPage.fillEmail(process.env.EMAIL!);
         await LoginPage.fillPassword(process.env.PASSWORD!);
+        await LoginPage.clickSubmitBtn();
         await expect(browser).toHaveUrlContaining("/login/sign-in");
     });
 
@@ -19,6 +20,7 @@ describe('LogIn page test', () => {
         await LoginPage.clickFooterLogInBtn();
         await LoginPage.fillEmail(process.env.EMAIL!);
         await LoginPage.fillPassword(process.env.WRONG_PASSWORD_WITH_FOUR_SYMBOLS!);
+        await LoginPage.clickSubmitBtn();
         await expect(browser).toHaveUrlContaining("/login/sign-in");
     });
 
