@@ -15,6 +15,8 @@ describe('SignUp page test', () => {
         await SignupPage.fillEmail(SignupPage.email);
         await SignupPage.fillFullname(SignupPage.fullname);
         await SignupPage.fillPassword(SignupPage.password);
+        await SignupPage.clickTermsConditionsCheckbox();
+        await SignupPage.clickCreateAccountBtn();
         await expect(browser).toHaveUrl("https://telnyx.com/sign-up");
     });
 
@@ -23,12 +25,16 @@ describe('SignUp page test', () => {
         await SignupPage.fillEmail(SignupPage.email);
         await SignupPage.fillFullname(SignupPage.fullname);
         await SignupPage.fillPassword(invalidPasswordWithOneSymbol);
+        await SignupPage.clickTermsConditionsCheckbox();
+        await SignupPage.clickCreateAccountBtn();
         await expect(browser).toHaveUrl("https://telnyx.com/sign-up");
     });
 
     it('Should signup with empty credentials', async () => {
         await SignupPage.clickFooterSignUpBtn();
         await SignupPage.signUpWithEmptyCredentials();
+        await SignupPage.clickTermsConditionsCheckbox();
+        await SignupPage.clickCreateAccountBtn();
         await expect(browser).toHaveUrl("https://telnyx.com/sign-up");
     });
 
