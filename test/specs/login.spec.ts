@@ -18,7 +18,7 @@ describe('LogIn page test', () => {
     it('Should login with invalid password which consists of 4 symbols', async () => {
         await LoginPage.clickFooterLogInBtn();
         await LoginPage.fillEmail(process.env.EMAIL!);
-        await LoginPage.fillPassword(process.env.WITH_FOUR_SYMBOLS!);
+        await LoginPage.fillPassword(process.env.PASSWORD_WITH_FOUR_SYMBOLS!);
         await expect(browser).toHaveUrlContaining("/login/sign-in");
     });
 
