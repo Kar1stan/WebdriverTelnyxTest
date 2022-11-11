@@ -43,7 +43,15 @@ class SignupPage {
         return Math.random().toString(36).substring(2,9);
     }
 
-    async clickFooterSignUpBtn(){
+    async clickCreateAccountBtn(){
+         await this.createAccountBtn.doubleClick();
+    }
+    
+    async clickTermsConditionsCheckbox(){
+         await this.termsConditionsCheckbox.click();
+    }
+    
+     async clickFooterSignUpBtn(){
         await this.footerSignUpBtn.scrollIntoView();
         await this.footerSignUpBtn.click();
     }
@@ -51,26 +59,19 @@ class SignupPage {
     async fillEmail(email:string){
         await this.emailInput.waitForDisplayed({ timeout: 5000 });
         await this.emailInput.setValue(email);
-        await this.termsConditionsCheckbox.click();
-        await this.createAccountBtn.doubleClick(); 
     }
 
     async fillFullname(fullname:string){
         await this.fullnameInput.setValue(fullname);
-        await this.termsConditionsCheckbox.click();
-        await this.createAccountBtn.doubleClick(); 
     }
 
     async fillPassword(password:string){
         await this.passwordInput.waitForDisplayed({ timeout: 5000 });
         await this.passwordInput.setValue(password);
-        await this.termsConditionsCheckbox.click();
-        await this.createAccountBtn.doubleClick(); 
     }
   
     async signUpWithEmptyCredentials(){
         await this.createAccountBtn.waitForDisplayed({ timeout: 5000 });
-        await this.createAccountBtn.click();
     }
   
     async clickLogInLinkBtn(){
