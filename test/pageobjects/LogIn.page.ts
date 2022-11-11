@@ -45,7 +45,7 @@ class LoginPage {
     get logInErrorRequestNotFound(){
         return $("div[type='error']")
     }
-    
+     
     async clickFooterLogInBtn(){
        await this.footerLogInBtn.scrollIntoView();
        await this.footerLogInBtn.click();
@@ -55,11 +55,13 @@ class LoginPage {
     async fillEmail(email:string){
         await this.emailInput.waitForDisplayed({ timeout: 5000 });
         await this.emailInput.setValue(email);
-        await this.submitBtn.click();
     }
 
     async fillPassword(password:string){
         await this.passwordInput.setValue(password);
+    }
+    
+    async clickSubmitBtn(){
         await this.submitBtn.click();
     }
 
