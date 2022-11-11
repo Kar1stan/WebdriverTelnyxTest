@@ -1,7 +1,7 @@
 # WebdriverTelnyxTest
 Project with 20 automated test cases on the telnyx.com site which is using Webdriver IO,Allure Report.
 
-### 💻 Topics
+##💻 Topics
 
 Integrated with:
 
@@ -10,13 +10,19 @@ Integrated with:
 - [x] https://webdriver.io/docs/selenium-standalone-service/
 - [x] https://www.npmjs.com/package/allure-commandline
 
-- ## 💻 Pre-requisites
+## 💻 Pre-requisites
 
 Before you use this project you need to have Docker installed in your computer.
 
-## 🚀 Install the project
+Also delete package.lock file before you run your project.
 
-Install project dependencies with: npm i
+### Git clone
+This will clone the project, install NPM packages and also the Webdriver.io which is required to run the test.
+```
+$ git clone https://github.com/Kar1stan/WebdriverTelnyxTest.git
+$ cd WebdriverTelnyxTest
+$ npm install
+```
 
 ## 🚀 Run the project: 
 If you want run the project in the production mode open the terminal and run: 
@@ -39,3 +45,5 @@ To stop them open the terminal and run:
 ```
 docker-compose -f "selenium-4-grid.yml" down
 ```
+## Credits
+For further help or additional errors [here](https://webdriver.io/docs/gettingstarted)
