@@ -57,7 +57,7 @@ class SignupPage {
     }
 
     async fillEmail(email:string){
-        await this.emailInput.waitForDisplayed({ timeout: 5000 });
+        await this.emailInput.waitForDisplayed({ timeout: 6000 });
         await this.emailInput.setValue(email);
     }
 
