@@ -19,6 +19,7 @@ class DataPrivacyPage {
     }
 
     async clickPrivacyLinkInOverviewBtn(){
+        await this.overviewBtn.waitForDisplayed({ timeout: 5000 });
         await this.overviewBtn.scrollIntoView();
         await this.pageBtn.click();
     }
