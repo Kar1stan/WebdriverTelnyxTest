@@ -1,0 +1,47 @@
+name: Test
+
+on:
+  push:
+    branches:
+    - main    
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  docker:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Start containers
+      run: docker-compose -f "selenium-4-grid.yml" up -d --build
+
+    - name: Install node
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14.x
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: Url=PROD_URL npm run testchrome 
+
+    - name: Stop containers
+      if: always()
+      run: docker-compose -f "selenium-4-grid.yml" down
+    
+    
+    
+    - name: Deploy 🚀
+      if: always()
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+        branch: gh-pages
+        folder: allure-report
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
