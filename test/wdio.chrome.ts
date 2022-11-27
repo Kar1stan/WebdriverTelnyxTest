@@ -203,7 +203,7 @@ export const config: Options.Testrunner = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 80000
+        timeout: 100000
     },
     //
     // =====
