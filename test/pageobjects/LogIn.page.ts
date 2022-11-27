@@ -71,7 +71,7 @@ class LoginPage {
     }
 
     async fillCompanyEmail(falsemail:string){
-        await this.singleSignOnBtn.waitForDisplayed({ timeout: 5000 });
+        await this.singleSignOnBtn.waitForDisplayed({ timeout: 8000 });
         await this.singleSignOnBtn.click();
         await this.companyEmailInput.setValue(falsemail);
         await this.continueBtn.click();
