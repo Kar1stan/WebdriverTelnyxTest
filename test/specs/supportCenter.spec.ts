@@ -3,13 +3,16 @@ import MainPage from  '../pageobjects/Main.page';
 
 
 describe('Footer Support Center page', () => {
+     before(() => {
+        MainPage.clickAcceptCookiesBtn();
+     })
+    
     beforeEach(() => {
         MainPage.visitUrl();
         SupportCenterPage.clickFooterSupportCenterBtn();
     })
 
     it('Should clicks Accessible Canada Act (ACA) in the Refence Material header', async () => {
-        await MainPage.clickAcceptCookiesBtn();
         await SupportCenterPage.clickAccessibleCanadaActInReferenceMaterial();
         await expect(browser).toHaveUrlContaining("/6228388-accessible-canada-act-aca-feedback-process-description");
     });
