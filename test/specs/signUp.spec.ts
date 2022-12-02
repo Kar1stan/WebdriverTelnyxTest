@@ -19,7 +19,7 @@ describe('SignUp page test', () => {
         await expect(browser).toHaveUrl("https://telnyx.com/sign-up");
     });
 
-    it('Should signup with invalid password', async () => {
+    it('Should signup with invalid password with one symbol', async () => {
         await SignupPage.clickFooterSignUpBtn();
         await SignupPage.fillEmail(SignupPage.email);
         await SignupPage.fillFullname(SignupPage.fullname);
