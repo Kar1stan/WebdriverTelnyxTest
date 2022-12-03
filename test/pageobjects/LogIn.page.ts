@@ -38,10 +38,6 @@ class LoginPage {
         return $("//button[text()='company name']")
     }
 
-    get logInErrorRequestNotFound(){
-        return $("div[type='error']")
-    }
-     
     async clickFooterLogInBtn(){
        await this.footerLogInBtn.scrollIntoView();
        await this.footerLogInBtn.click();
