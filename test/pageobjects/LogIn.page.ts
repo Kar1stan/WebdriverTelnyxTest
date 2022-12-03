@@ -18,10 +18,6 @@ class LoginPage {
         return $("//button[text()='Log in']")
     }
 
-    get logInError(){
-        return $("div[type='error']")
-    }
-    
     get singleSignOnBtn(){
         return $("//button[text()='Single Sign-On']")
     }
