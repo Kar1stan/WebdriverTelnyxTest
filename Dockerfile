@@ -18,4 +18,4 @@ COPY . .
 EXPOSE 8040
 
 # Run the application.
-CMD ["npm","run","cypress:open"]
+CMD ["npm","run","testchrome"]
