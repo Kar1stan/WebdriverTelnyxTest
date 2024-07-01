@@ -1,4 +1,4 @@
-name: Test
+name: WebdriverTest
 
 on:
   push:
@@ -17,13 +17,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Start dockerfile
+      run: docker build . -t vladocker1qa2/node-docker-app:v1
+      run: docker run -d -p 8001:8040 vladocker1qa2/node-docker-app:v1
+
     - name: Start containers
       run: docker-compose -f "selenium-4-grid.yml" up -d --build
 
     - name: Install node
       uses: actions/setup-node@v2
       with:
-        node-version: 14.x
+        node-version: 18.x
 
     - name: Install dependencies
       run: npm install
@@ -31,6 +35,9 @@ jobs:
     - name: Run tests
       run: Url=PROD_URL npm run testchrome 
 
+    - name: Stop dockerfile 
+      run: docker stop vladocker1qa2/node-docker-app:v1
+  
     - name: Stop containers
       if: always()
       run: docker-compose -f "selenium-4-grid.yml" down
