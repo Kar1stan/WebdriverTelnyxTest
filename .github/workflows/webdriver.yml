@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Start dockerfile
-      run: docker run -d -p 8001:8040 vladocker1qa2/node-docker-app:v1
+      run: docker run -d -p 8001:8040 node-docker-app:v1
 
     - name: Start containers
       run: docker-compose -f "selenium-4-grid.yml" up -d --build
