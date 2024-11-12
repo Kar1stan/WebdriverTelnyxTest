@@ -23,7 +23,7 @@ jobs:
        docker run -d -p 8001:8040 cypress-docker-app:v1
 
     - name: Start containers
-      run: docker-compose -f "selenium-4-grid.yml" up -d --build
+      run: docker compose -f "selenium-4-grid.yml" up -d --build
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
