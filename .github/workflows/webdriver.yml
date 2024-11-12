@@ -61,8 +61,6 @@ jobs:
       if: always()
       run: docker-compose -f "selenium-4-grid.yml" down
     
-    
-    
     - name: Deploy 🚀
       if: always()
       uses: JamesIves/github-pages-deploy-action@4.1.5
