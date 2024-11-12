@@ -59,7 +59,7 @@ jobs:
   
     - name: Stop containers
       if: always()
-      run: docker-compose -f "selenium-4-grid.yml" down
+      run: docker compose -f "selenium-4-grid.yml" down
     
     - name: Deploy 🚀
       if: always()
