@@ -41,6 +41,7 @@ To run docker containers open the terminal and run:
 ```
 docker-compose -f "selenium-4-grid.yml" up -d --build
 ```
+
 To stop them open the terminal and run:
 ```
 docker-compose -f "selenium-4-grid.yml" down
