@@ -4,7 +4,7 @@ import MainPage from  '../pageobjects/Main.page';
 beforeEach(() => {
    MainPage.visitUrl();
 })
- 
+
 describe('Footer AboutUs page', () => {
      it('Should check Channels & calls per second', async () => {
         await MainPage.clickAcceptCookiesBtn();
